@@ -10,6 +10,9 @@
             font-size: 3em; /* Increase the font size */
             margin: 30px 0; /* Add more spacing above and below */
         }
+        .input-container {
+            margin: 20px 0; /* Add spacing above and below the input container */
+        }
     </style>
 </head>
 <body>
@@ -18,6 +21,10 @@
         <input type="checkbox" id="toggleSwitch">
         <span class="slider"></span>
     </label>
+    <div class="input-container">
+        <input type="number" id="timeInput" placeholder="Enter minutes" style="padding: 10px; font-size: 1em;">
+        <button type="button" class="button" id="startButton">Start</button>
+    </div>
     <div id="timerDisplay">Timer: 5</div> <!-- Added timer display -->
 
     <script src="script.js"></script>

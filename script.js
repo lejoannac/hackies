@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const toggleSwitch = document.getElementById("toggleSwitch");
   const timerDisplay = document.getElementById("timerDisplay");
+  const timeInput = document.getElementById("timeInput");
+  const startButton = document.getElementById("startButton");
   let timer;
   let timerValue = 5;
   let popupTimer;
@@ -31,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
       enableScrollToTop();
     } else {
       disableScrollToTop();
+    }
+  });
+
+  // Start button event listener
+  startButton.addEventListener("click", function () {
+    const inputMinutes = parseInt(timeInput.value, 10);
+    if (!isNaN(inputMinutes) && inputMinutes > 0) {
+      timerValue = inputMinutes * 60; // Convert minutes to seconds
+      startTimer();
     }
   });
 
@@ -75,7 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function updateTimerDisplay() {
     if (timerDisplay) {
-      timerDisplay.textContent = `Timer: ${timerValue}`;
+      const minutes = Math.floor(timerValue / 60);
+      const seconds = timerValue % 60;
+      timerDisplay.textContent = `Timer: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
   }
 
@@ -93,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function stopPopupTimer() {
     clearInterval(popupTimer);
   }
-  
+
   function showPopup() {
     const popup = document.createElement("div");
     popup.textContent = "ERROR YOU ARE GETTING HACKED";
@@ -106,12 +119,12 @@ document.addEventListener("DOMContentLoaded", function () {
     popup.style.border = "1px solid black";
     popup.style.zIndex = "1000";
     document.body.appendChild(popup);
-    
+
     const audio = new Audio(chrome.runtime.getURL("emergency-alarm-69780.mp3"));
     audio.play();
 
     setTimeout(() => {
-        document.body.removeChild(popup);
+      document.body.removeChild(popup);
     }, 5000); // Remove popup after 3 seconds
   }
 
