@@ -1,4 +1,4 @@
-var button = document.getElementById("btn2");
-button2.addEventListener("click", function(){
-    chrome.tabs.create({url:"https://www.youtube.com/watch?v=DSG53BsUYd0"});
+var button5 = document.getElementById("btn5");
+button5.addEventListener("click", function() {
+    chrome.tabs.create({ url: "https://www.youtube.com/watch?v=DSG53BsUYd0" });
 });
