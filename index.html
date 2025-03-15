@@ -3,78 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Useless Popup</title>
-    <style>
-        body {
-            width: 200px;
-            height: 150px;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-    </style>
+    <title>Productivity Toggle</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h2>Useless Popup</h2>
-    <p>Clicking this does nothing useful!</p>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extension Toggle</title>
-  <style>
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 25px;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: gray;
-      border-radius: 25px;
-      transition: 0.4s;
-    }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 4px;
-      bottom: 3px;
-      background-color: white;
-      border-radius: 50%;
-      transition: 0.4s;
-    }
-    input:checked + .slider {
-      background-color: #4CAF50;
-    }
-    input:checked + .slider:before {
-      transform: translateX(24px);
-    }
-  </style>
-</head>
 <body>
-  <h1>Toggle Extension</h1>
-  <label class="switch">
-    <input type="checkbox" id="toggleSwitch">
-    <span class="slider"></span>
-  </label>
+    <h1>Toggle Extension</h1>
+    <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+    </label>
+    <div id="timerDisplay">Timer: 5</div> <!-- Added timer display -->
 
-  <script src="popup.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script>
+        // Add an event listener to the document to listen for keydown events
+        document.addEventListener("keydown", function (event) {
+            // Check if the pressed key is "b"
+            if (event.key === "b") {
+                // Redirect the current tab to the specified YouTube link
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+        });
+    </script>
+    <button type="button" class="button" id="btn1">New Tab</button>
+    <script src="popup.js"></script>
+
+    </script>
+    <button type="button" class="button" id="btn2">Undo</button>
+    <script src="popup2.js"></script>
+ </body>
 </html>
 

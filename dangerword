@@ -1,0 +1,8 @@
+// Listen for keydown events on the document
+document.addEventListener("keydown", function (event) {
+    // Check if the pressed key is "b"
+    if (event.key === "b") {
+        // Redirect to the YouTube link
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    }
+});

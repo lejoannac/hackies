@@ -1,14 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "My Useless Extension",
-    "version": "1.0",
-    "description": "Does something useless and contradicting.",
-    "action": {
-      "default_popup": "index.html",
-      "default_icon": "pig.png"
-    },
-    "permissions": ["activeTab"]
+  "manifest_version": 3,
+  "name": "Scroll to Top Extension",
+  "version": "1.0",
+  "description": "Automatically scrolls to the top when scrolling down.",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "pig.png"
   }
-  
+}
 
-  
+

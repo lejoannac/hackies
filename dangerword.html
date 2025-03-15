@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger Word</title>
+</head>
+<body>
+    <h1>Press "b" to trigger the danger word!</h1>
+
+    <script>
+        // Add an event listener to the document to listen for keydown events
+        document.addEventListener("keydown", function (event) {
+            // Check if the pressed key is "b"
+            if (event.key === "b") {
+                // Redirect the current tab to the specified YouTube link
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }
+        });
+    </script>
+</body>
+</html>
