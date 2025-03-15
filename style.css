@@ -59,7 +59,7 @@ html, body {
 }
 
 #btn1 {
-    background-color: #FF1CE0; /* Green background */
+    background-color: #FF1CE0; /* Pink background */
     border: none; /* Remove borders */
     color: white; /* White text */
     padding: 15px 32px; /* Some padding */
@@ -70,8 +70,31 @@ html, body {
     margin: 4px 2px; /* Some margin */
     cursor: pointer; /* Pointer/hand icon */
     border-radius: 12px; /* Rounded corners */
-  }
-  
-  #btn1:hover {
-    background-color: rgb(120, 4, 135); /* Darker green on hover */
-  }
+}
+
+#btn1:hover {
+    background-color: rgb(85, 4, 135); /* Darker pink on hover */
+}
+
+#btn5 {
+    background-color: #1c9dff; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the button inline-block */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px 20px 2px; /* Some margin with extra space at the bottom */
+    cursor: pointer; /* Pointer/hand icon */
+    border-radius: 12px; /* Rounded corners */
+}
+
+#btn5:hover {
+    background-color: rgb(30, 4, 135); /* Darker blue on hover */
+}
+
+#timerDisplay {
+    font-size: 2em; /* Increase the font size */
+    margin: 10px 0; /* Add more spacing above and below */
+}
