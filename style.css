@@ -1,0 +1,10 @@
+<style>
+    body {
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: plum
+        color: paleturquoise; /* Ensures text is readable */
+    }
+</style>
