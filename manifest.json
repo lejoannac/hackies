@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Does something useless and contradicting.",
     "action": {
-      "default_popup": "popup.html",
+      "default_popup": "index.html",
       "default_icon": "pig.png"
     },
     "permissions": ["activeTab"]
